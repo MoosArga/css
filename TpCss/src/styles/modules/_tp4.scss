@@ -1,7 +1,8 @@
 @import "../vars";
 
 .tp4 {
-  margin: 50px;
+  margin: 50px 0 0 50px;
+  position: relative;
 }
 
 .tp4-icon-info {
@@ -10,8 +11,28 @@
   border-radius: 50%;
   background-color: blue;
   color: white;
+  &:hover + .tp4-info-bulle {
+    display: block;
+  }
 }
 
 .tp4-info-bulle {
-
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: calc(100% + 30px);
+  min-width: 200px;
+  background-color: #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    border-right: 20px solid #cccccc;
+    border-top: 20px solid #cccccc;
+    border-bottom: 20px solid #cccccc;
+    border-left: 20px solid transparent;
+  }
 }

@@ -1,12 +1,21 @@
 @import "../vars";
 
+$margin-tp3: 25px;
+
 .tp3 {
-  width: 1002px;
+  //width: 1002px;
   border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: $margin-tp3;
+  padding-left: $margin-tp3;
 }
 
 .tp3-item {
-  width: 300px;
+  width: calc(33.3% - 25px);
   height: 50px;
+  margin-right: $margin-tp3;
+  margin-bottom: $margin-tp3;
   background-color: red;
 }
